@@ -67,6 +67,9 @@ def train_model (config=None):
     quality = check_data_quality(df, config["numeric_columns"])
     print(f"Data quality: {quality['total_nulls']} nulls, {quality['duplicate_rows']} duplicates")
 
+    if quality["null_percentage"] > 10:
+        print(f"WARNING: High null percentage: {quality['null_percentage']}%")
+
     # Clean (preprocessing module)
     df = encode_categoricals(df, config["categorical_columns"])
 
