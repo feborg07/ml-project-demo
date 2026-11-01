@@ -2,3 +2,6 @@ pandas==3.0.0
 numpy==2.4.1
 scikit-learn==1.8.0
 pytest==9.1.1
+
+
+# Run this code to know your versions pip freeze | grep -i "pandas\|numpy\|scikit-learn\|pytest"
